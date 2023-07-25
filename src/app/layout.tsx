@@ -21,8 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <Sidebar />
-        {children}
+        <div className="flex gap-[1rem]">
+          <nav className="bg-slate-100 p-[1rem] flex flex-col min-h-screen w-1/4">
+            <Sidebar />
+          </nav>
+          <section className="w-3/4">{children}</section>
+        </div>
       </body>
     </html>
   );
